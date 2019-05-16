@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalise.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+    <section class="page__section">
+        <div class="card">
+            <div class="card__inner">
+                <div class="card__title">Password Requirements</div>
+                <div class="card__form-group">
+                    <label for="password" class="card__label">Password</label>
+                    <input id="password" type="password" class="card__input">
+                </div>
+                <div class="require">
+                    <p>Your password must contain</p>
+                    <ul class="require__list">
+                        <li id="password-length" class="require__list-item" data-min="8" data-max="30"></li>
+                        <li id="uppercase" class="require__list-item">One Uppercase</li>
+                        <li id="lowercase" class="require__list-item">One Lowercase</li>
+                        <li id="number" class="require__list-item">One Number</li>
+                        <li id="space" class="require__list-item">No Space</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
