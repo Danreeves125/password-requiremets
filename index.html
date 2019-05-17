@@ -18,7 +18,10 @@
                 <div class="card__title">Password Requirements</div>
                 <div class="card__form-group">
                     <label for="password" class="card__label">Password</label>
-                    <input id="password" type="password" class="card__input">
+                    <div class="card__input-wrap">
+                        <input id="password" type="password" class="card__input" data-show-password="false">
+                        <div class="card__show-password" id='show-password'></div>
+                    </div>
                 </div>
                 <div class="require">
                     <p>Your password must contain</p>
@@ -27,7 +30,7 @@
                         <li id="uppercase" class="require__list-item">One Uppercase</li>
                         <li id="lowercase" class="require__list-item">One Lowercase</li>
                         <li id="number" class="require__list-item">One Number</li>
-                        <li id="space" class="require__list-item">No Space</li>
+                        <li id="space" class="require__list-item">No Spaces</li>
                     </ul>
                 </div>
             </div>

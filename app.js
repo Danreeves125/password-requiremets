@@ -5,17 +5,42 @@ const passwordInput = document.getElementById('password'),
       checkLowercase = new RegExp('[a-z]'),
       checkForNumbers = new RegExp('[0-9]');
 
-document.querySelector('.require__list-item').textContent = `${passMin} - ${passMax} Characters`;
+document.querySelector('.require__list-item').textContent = `Between ${passMin} - ${passMax} Characters`;
 
 passwordInput.addEventListener('input', function(){
     const inputValue = passwordInput.value;
-
     checkLength(inputValue);
     checkValueForUppercase(inputValue);
     checkValueForLowercase(inputValue);
     checkValueForNumber(inputValue);
     checkValueForSpaces(inputValue);
 });
+
+document.getElementById('show-password').addEventListener('click', showPassword);
+
+function showPassword() {
+    const showPassIcon = document.getElementById('show-password'),
+          changePasswordAttr = document.getElementById('password');
+
+    if(document.getElementById('password').getAttribute('data-show-password') === 'false') {
+        showPassIcon.classList.add('active');
+
+        changePasswordAttr.removeAttribute('type');
+        changePasswordAttr.setAttribute('type', 'text');
+
+        changePasswordAttr.removeAttribute('data-show-password');
+        changePasswordAttr.setAttribute('data-show-password', 'true');
+    } else {
+        showPassIcon.classList.remove('active');
+
+        changePasswordAttr.removeAttribute('type');
+        changePasswordAttr.setAttribute('type', 'password');
+
+        changePasswordAttr.removeAttribute('data-show-password');
+        changePasswordAttr.setAttribute('data-show-password', 'false');
+    }
+
+}
 
 function checkLength(value) {
     if(value.length > passMin && value.length < passMax) {

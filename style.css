@@ -68,6 +68,8 @@
     height: 35px;
     margin-bottom: 0;
     padding: 5px;
+    font-family: var(--roboto);
+    font-size: 16px;
 }
 
 .require {
@@ -120,6 +122,39 @@
 .require__list-item.condition-met:before {
     content: "\f00c";
     color: #05dd39;
+}
+
+.card__input-wrap {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.card__show-password {
+    width: 30px;
+    height: 30px;
+    float: left;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.card__show-password:before {
+    content: '\f070';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card__show-password.active:before {
+    content: '\f06e';
 }
 
 @media(max-width: 400px) {
